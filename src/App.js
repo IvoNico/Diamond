@@ -1,4 +1,4 @@
-import logo from './assets/Diamond-logo.png';
+
 import './App.css';
 import NavBar from './components/NavBar.js'
 
