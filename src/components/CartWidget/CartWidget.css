@@ -1,0 +1,15 @@
+.navbar-shop{
+    width: 40px;
+}
+.button-shop{
+    width: 60px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+}
+.count-shop{
+    font-size: 1.1rem;
+}

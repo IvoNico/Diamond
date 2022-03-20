@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.css'
 
 export default function NavBar() {
     return(
@@ -14,7 +16,9 @@ export default function NavBar() {
                     <li><Button className='list-button' variant="text">Nosotros</Button></li>
                     <li><Button className='list-button' variant="text">Contacto</Button></li>
                 </ul>
+                <CartWidget/>
             </nav>
+            
         </header>
     )
 }

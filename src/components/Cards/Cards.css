@@ -1,0 +1,8 @@
+.cards{
+    margin: 100px auto;
+}
+.cards img:hover {
+    width: 400px;
+    height: 50vh;
+    position: relative;
+}

@@ -1,0 +1,33 @@
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(248, 246, 246, 0.096);
+    height: 10vh;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.096);
+}
+.navbar-logo{
+    width: 100px;
+}
+.navbar-shop{
+    width: 50px;
+    padding: 10px
+}
+.navbar-list{
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
+    list-style: none;
+    margin:0 auto;
+    justify-content: center;
+}
+.navbar-list li{
+    margin-right: 10px;
+}
+.list-button{
+    color: black !important;
+}
+.list-button:hover{
+    background-color: #38B6FF;
+}
