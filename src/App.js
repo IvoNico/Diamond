@@ -4,14 +4,14 @@ import ListProducts from './components/ListProducts/ListProducts.js';
 
 function App() {
   return (
-    <body className="App">
-      <header>
+    <div className="App">
+      <div>
         <NavBar/>
-      </header>
-      <main>
+      </div>
+      <div>
         <ListProducts/>
-      </main>
-    </body>
+      </div>
+    </div>
   );
 }
 

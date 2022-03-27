@@ -10,10 +10,7 @@
 .navbar-logo{
     width: 100px;
 }
-.navbar-shop{
-    width: 50px;
-    padding: 10px
-}
+
 .navbar-list{
     display:flex;
     flex-direction: row;
