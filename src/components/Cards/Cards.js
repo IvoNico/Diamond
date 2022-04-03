@@ -1,21 +1,18 @@
-import React, {  useEffect } from 'react'; //se utiliza para hacer uso de los hooks
+import React from 'react'; //se utiliza para hacer uso de los hooks
+import './Cards.css'
+import DetailContainer from '../ItemsDetailsContainer/ItemsDetailContainer'
+
+//impor from MUI
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import ItemCount from '../ItemsCount/ItemsCount'
-import './Cards.css'
+
 
 //Para mostrar fecha/hora del ultimo click, se puede utilizar la libreria Date de js "new Date() o "new Date().tolocaleString()"
-
-export default function MultiActionAreaCard({data}) {
-    const {nombre, tipo, ambientes, valor, image, stock} = data
-
-    const onAdd = (count) => {
-        console.log(`Agregaste ${count} productos al carrito.`)
-    }
-
+/*
     useEffect( () =>{
         console.log("log desde UseEffect")
     }, [] ) //el [] indica que solo se ejecute al principio o [count] para indicar que se ejecute cuando deperminado estado cambie
@@ -33,6 +30,15 @@ export default function MultiActionAreaCard({data}) {
         }
         
     })
+*/
+
+export default function MultiActionAreaCard({data}) {
+    const {nombre, tipo, ambientes, valor, image, stock, id} = data
+    const onAdd = (count) => {
+        console.log(`Agregaste ${count} productos al carrito.`)
+    }
+    
+
 
     return (
     <Card className='cards' sx={{ maxWidth: 345 }}>
@@ -60,7 +66,7 @@ export default function MultiActionAreaCard({data}) {
         </CardActionArea>
         <CardActions>
             <Button size="small" color="primary">
-                Shop now
+                <DetailContainer key={id} />
             </Button>
             <ItemCount stock={stock} onAdd={onAdd} />
         </CardActions>
