@@ -1,20 +1,33 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import MultiActionAreaCard from '../Cards/Cards';
-
-export default function ListProducts (){
-    let dataProducts = {
-        id: 1,
-        nombre: 'Mansion Hilton',
-        tipo: 'Mansión',
-        Ambientes: '8 piezas, 4 baños, 1 living, 1 comedor',
-        valor: 'USD$25.000.000',
-        image: '../assets/Products/Mansion-Hilton.jpeg',
-        stock: '5'
-    }
+import DataProducts from '../../Products/Products';
+//import Products from '../ListProducts/products.json'
+const ListProducts = () =>{
     
+    const [products, setProducts] = useState([])
+
+    const getProducts = () =>{
+        return new Promise((resolve, reject) =>{
+            setTimeout(() =>{
+                resolve(DataProducts)
+            }, 3000)
+        })
+    }
+    useEffect( () =>{
+        getProducts().then((data) =>{
+            setProducts(data)
+        })
+    }, [])
     return(
         <section>
-            <MultiActionAreaCard data={dataProducts}  />
+        {products.map((product) =>{
+            const {id} = product
+            return(
+                <MultiActionAreaCard data={product} key={id} />
+            )
+        })}
         </section>
     )
 }
+
+export default ListProducts
